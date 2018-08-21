@@ -1,0 +1,51 @@
+{
+  "name": "@jaredlunde/react-picture",
+  "version": "1.0.0",
+  "description": "A <picture> component for React with some additional capabilities",
+  "main": "cjs/index.js",
+  "module": "es/index.js",
+  "jsnext:main": "es/index.js",
+  "esnext": "es/index.js",
+  "repository": "https://github.com/jaredLunde/react-picture",
+  "author": "Jared Lunde",
+  "license": "MIT",
+  "private": false,
+  "peerDependencies": {
+    "prop-types": "^15.6.2",
+    "react": "^16.4.2"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.0.0-rc.1",
+    "@render-props/utils": "^0.2.5",
+    "empty": "^0.10.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-rc.1",
+    "@babel/core": "^7.0.0-rc.1",
+    "@babel/plugin-proposal-class-properties": "^7.0.0-rc.1",
+    "@babel/plugin-proposal-export-default-from": "^7.0.0-rc.1",
+    "@babel/plugin-proposal-export-namespace-from": "^7.0.0-rc.1",
+    "@babel/plugin-proposal-logical-assignment-operators": "^7.0.0-rc.1",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.0.0-rc.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-rc.1",
+    "@babel/plugin-proposal-optional-chaining": "^7.0.0-rc.1",
+    "@babel/plugin-transform-react-constant-elements": "^7.0.0-rc.1",
+    "@babel/plugin-transform-runtime": "^7.0.0-rc.1",
+    "@babel/preset-env": "^7.0.0-rc.1",
+    "@babel/preset-react": "^7.0.0-rc.1",
+    "babel-plugin-closure-elimination": "^1.3.0",
+    "babel-plugin-dev-expression": "^0.2.1",
+    "babel-plugin-transform-react-pure-components": "^3.1.2",
+    "cross-env": "^5.2.0",
+    "prettier": "^1.14.2"
+  },
+  "scripts": {
+    "build": "yarn run build:es && yarn run build:cjs",
+    "build:es": "rm -rf es && cross-env NODE_ENV=production cross-env BABEL_ENV=es babel src --out-dir es && npm run prettier:es",
+    "build:cjs": "rm -rf cjs && cross-env NODE_ENV=production cross-env BABEL_ENV=cjs babel src --out-dir cjs && npm run prettier:cjs",
+    "build-pub": "yarn run build && yarn publish --access public",
+    "edit": "atom ./",
+    "prettier:es": "prettier --single-quote --no-semi --no-bracket-spacing --trailing-comma es5 --write \"es/**/*.js\"",
+    "prettier:cjs": "prettier --single-quote --no-semi --no-bracket-spacing --trailing-comma es5 --write \"cjs/**/*.js\""
+  }
+}
