@@ -1,6 +1,6 @@
 {
   "name": "@jaredlunde/react-picture",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A <picture> component for React with some additional capabilities",
   "main": "cjs/index.js",
   "module": "es/index.js",
@@ -20,22 +20,8 @@
     "empty": "^0.10.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.0.0-rc.1",
-    "@babel/core": "^7.0.0-rc.1",
-    "@babel/plugin-proposal-class-properties": "^7.0.0-rc.1",
-    "@babel/plugin-proposal-export-default-from": "^7.0.0-rc.1",
-    "@babel/plugin-proposal-export-namespace-from": "^7.0.0-rc.1",
-    "@babel/plugin-proposal-logical-assignment-operators": "^7.0.0-rc.1",
-    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.0.0-rc.1",
-    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-rc.1",
-    "@babel/plugin-proposal-optional-chaining": "^7.0.0-rc.1",
-    "@babel/plugin-transform-react-constant-elements": "^7.0.0-rc.1",
-    "@babel/plugin-transform-runtime": "^7.0.0-rc.1",
-    "@babel/preset-env": "^7.0.0-rc.1",
-    "@babel/preset-react": "^7.0.0-rc.1",
-    "babel-plugin-closure-elimination": "^1.3.0",
-    "babel-plugin-dev-expression": "^0.2.1",
-    "babel-plugin-transform-react-pure-components": "^3.1.2",
+    "@inst-app/babel-preset-esx": "^1.0.2",
+    "@inst-app/babel-preset-react": "^1.0.0",
     "cross-env": "^5.2.0",
     "prettier": "^1.14.2"
   },
