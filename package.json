@@ -1,6 +1,6 @@
 {
   "name": "@jaredlunde/react-picture",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A <picture> component for React with some additional capabilities",
   "main": "cjs/index.js",
   "module": "es/index.js",
