@@ -137,7 +137,13 @@ export default class Picture extends React.PureComponent {
     }
   }
 
-  setRef = el => this.picture = el
+  setRef = el => {
+    this.picture = el
+    
+    if (this.props.innerRef !== void 0) {
+      this.props.innerRef(el)
+    }
+  }
 
   findImg ({srcset, width, height}) {
     let offsetWidth = width || 0
@@ -285,8 +291,8 @@ export default class Picture extends React.PureComponent {
         height={height}
         className={className}
         ref={this.setRef}
-        data-autosize={!width || !height}
-        data-strict={width && height}
+        data-autosize={!width || !height ? true : false}
+        data-strict={width && height ? true : false}
       >
         {this.webpSrc}
         {this.defaultSrc}
