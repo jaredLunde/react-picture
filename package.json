@@ -1,6 +1,6 @@
 {
   "name": "@jaredlunde/react-picture",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A <picture> component for React with some additional capabilities",
   "main": "cjs/index.js",
   "module": "es/index.js",
@@ -11,11 +11,11 @@
   "license": "MIT",
   "private": false,
   "peerDependencies": {
-    "prop-types": "^15.6.2",
-    "react": "^16.4.2"
+    "prop-types": "^15.x",
+    "react": "^16.x"
   },
   "dependencies": {
-    "@babel/runtime": "^7.0.0-rc.1",
+    "@babel/runtime": "^7.0.0",
     "@render-props/utils": "^0.2.5",
     "empty": "^0.10.1"
   },
@@ -23,12 +23,13 @@
     "@inst-app/babel-preset-esx": "^1.0.2",
     "@inst-app/babel-preset-react": "^1.0.0",
     "cross-env": "^5.2.0",
-    "prettier": "^1.14.2"
+    "prettier": "^1.14.2",
+    "rimraf": "^2.6.2"
   },
   "scripts": {
     "build": "yarn run build:es && yarn run build:cjs",
-    "build:es": "rm -rf es && cross-env NODE_ENV=production cross-env BABEL_ENV=es babel src --out-dir es && npm run prettier:es",
-    "build:cjs": "rm -rf cjs && cross-env NODE_ENV=production cross-env BABEL_ENV=cjs babel src --out-dir cjs && npm run prettier:cjs",
+    "build:es": "rimraf es && cross-env NODE_ENV=production BABEL_ENV=es babel src --out-dir es && npm run prettier:es",
+    "build:cjs": "rimraf cjs && cross-env NODE_ENV=production BABEL_ENV=cjs babel src --out-dir cjs && npm run prettier:cjs",
     "build-pub": "yarn run build && yarn publish --access public",
     "edit": "atom ./",
     "prettier:es": "prettier --single-quote --no-semi --no-bracket-spacing --trailing-comma es5 --write \"es/**/*.js\"",
