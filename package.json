@@ -1,6 +1,6 @@
 {
   "name": "@jaredlunde/react-picture",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A <picture> component for React with some additional capabilities",
   "main": "cjs/index.js",
   "module": "es/index.js",
@@ -11,8 +11,8 @@
   "license": "MIT",
   "private": false,
   "peerDependencies": {
-    "prop-types": "^15.x",
-    "react": "^16.x"
+    "prop-types": ">= 15.6.0",
+    "react": ">= 16.0.0"
   },
   "dependencies": {
     "@babel/runtime": "^7.0.0",
@@ -22,7 +22,6 @@
   "devDependencies": {
     "@inst-app/babel-preset-esx": "^1.0.2",
     "@inst-app/babel-preset-react": "^1.0.0",
-    "cross-env": "^5.2.0",
     "prettier": "^1.14.2",
     "rimraf": "^2.6.2"
   },
